@@ -56,15 +56,63 @@
 		18F4112926299B3A00DC15A3 /* TeamProject */ = {
 			isa = PBXGroup;
 			children = (
-				18F4112A26299B3A00DC15A3 /* AppDelegate.swift */,
-				18F4112C26299B3A00DC15A3 /* SceneDelegate.swift */,
-				18F4112E26299B3A00DC15A3 /* ViewController.swift */,
-				18F4113026299B3A00DC15A3 /* Main.storyboard */,
-				18F4113326299B3B00DC15A3 /* Assets.xcassets */,
-				18F4113526299B3B00DC15A3 /* LaunchScreen.storyboard */,
-				18F4113826299B3B00DC15A3 /* Info.plist */,
+				18F4114226299B7500DC15A3 /* Viewcontrollers */,
+				18F4114126299B5D00DC15A3 /* Storyboards */,
+				18F4114526299BA900DC15A3 /* Models */,
+				18F4114626299BB300DC15A3 /* Data Managers */,
+				18F4114026299B4D00DC15A3 /* Resources */,
+				18F4114426299B8600DC15A3 /* Support */,
 			);
 			path = TeamProject;
+			sourceTree = "<group>";
+		};
+		18F4114026299B4D00DC15A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18F4113326299B3B00DC15A3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18F4114126299B5D00DC15A3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18F4113026299B3A00DC15A3 /* Main.storyboard */,
+				18F4113526299B3B00DC15A3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		18F4114226299B7500DC15A3 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				18F4112E26299B3A00DC15A3 /* ViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		18F4114426299B8600DC15A3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				18F4112A26299B3A00DC15A3 /* AppDelegate.swift */,
+				18F4112C26299B3A00DC15A3 /* SceneDelegate.swift */,
+				18F4113826299B3B00DC15A3 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		18F4114526299BA900DC15A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18F4114626299BB300DC15A3 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = TeamProject/Info.plist;
+				INFOPLIST_FILE = TeamProject/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = TeamProject/Info.plist;
+				INFOPLIST_FILE = TeamProject/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
