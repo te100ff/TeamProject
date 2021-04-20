@@ -22,17 +22,19 @@ class LoginViewController: UIViewController {
         okButton.layer.cornerRadius = okButton.frame.height/2
         
     }
-
-
     
-    }
+}
 
 extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
-        }
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     func textFieldDidBeginEditing (_ textField: UITextField) {
         
@@ -72,10 +74,10 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     
-//    @objc func clearPressed() {
-//        nameTF.text = ""
-//        view.endEditing(true)
-//    }
+    //    @objc func clearPressed() {
+    //        nameTF.text = ""
+    //        view.endEditing(true)
+    //    }
     
     
     
@@ -83,10 +85,10 @@ extension LoginViewController: UITextFieldDelegate {
         let formater = DateFormatter()
         formater.dateStyle = .long
         formater.timeStyle = .none
-
+        
         birthdayTF.text = formater.string(from: datePicker.date)
         view.endEditing(true)
     }
-
+    
 }
 
