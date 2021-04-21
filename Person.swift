@@ -14,7 +14,6 @@ struct Person {
     let dateOfBirth: Date
     
     var zodiac: ZodiacSign {
-       // ZodiacSign(rawValue: getZodiakFromString(dayOfBirth: dayOfBirth))!
         ZodiacSign(rawValue: getZodiak(dayOfBirth: dateOfBirth))!
     }
     
@@ -24,39 +23,6 @@ struct Person {
     static func getFriends() {
         
     }
-    private func getZodiakFromString(dayOfBirth: String) -> String {
-        
-        let zodiakDic = ["Овен": ["03/21", "04/20"], "Телец": ["04/21", "05/21"],
-                         "Близнецы": ["05/22", "06/21"], "Рак": ["06/22", "07/22"],
-                         "Лев": ["07/23", "08/21"], "Дева": ["08/22", "09/23"],
-                         "Весы": ["09/24", "10/23"], "Скорпион": ["10/24", "11/22"],
-                         "Стрелец": ["11/23", "12/22"], "Козерог": ["12/23", "01/20"],
-                         "Водолей": ["01/21", "02/19"], "Рыбы": ["02/20", "03/20"]]
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd"
-        
-        
-        let day = formatter.date(from: dayOfBirth)
-        let calendar = Calendar.current
-        let dateComponents = Calendar.current.dateComponents([.month, .day], from: day!)
-        let shortDate = calendar.date(from: dateComponents)
-        
-        for zodiak in zodiakDic {
-            
-            let dateMin = formatter.date(from: zodiak.value.first!)
-            let minDateCompontnts = Calendar.current.dateComponents([.month, .day], from: dateMin!)
-            let realMindate = calendar.date(from: minDateCompontnts)
-            let dateMax = formatter.date(from: zodiak.value.last!)
-            let maxDateCompontnts = Calendar.current.dateComponents([.month, .day], from: dateMax!)
-            let realMaxdate = calendar.date(from: maxDateCompontnts)
-            
-            if (realMindate!...realMaxdate!).contains(shortDate!) {
-                return zodiak.key
-            }
-        }
-        return "oops"
-    } // Вернет знак Зодиака как строку из String
     
     private func getZodiacDiscription(zodiac: ZodiacSign) -> String {
         
@@ -90,10 +56,6 @@ struct Person {
         }
     } // Вернет описание знака Зодиака как строку
     
-    
-    
-    
-    
     private func getZodiak(dayOfBirth: Date) -> String {
     
             let zodiakDic = ["Овен": ["03/21", "04/20"], "Телец": ["04/21", "05/21"],
@@ -124,7 +86,7 @@ struct Person {
                 }
             }
             return "Козерог"
-        }
+        } // Вернет знак Зодиака как строку из Date
     
 }
 
