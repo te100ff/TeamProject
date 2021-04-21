@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var surnameTF: UITextField!
     @IBOutlet weak var birthdayTF: UITextField!
+    @IBOutlet weak var zodiacView: UIImageView!
     
     let datePicker = UIDatePicker()
     
