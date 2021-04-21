@@ -56,7 +56,7 @@ extension LoginViewController: UITextFieldDelegate {
             textField.inputView = datePicker
             datePicker.datePickerMode = .date
             datePicker.preferredDatePickerStyle = .wheels
-            datePicker.locale = .current
+            datePicker.locale = Locale(identifier: "ru_RU")
             
             doneButton = UIBarButtonItem(
                 title: "Done",
@@ -85,9 +85,20 @@ extension LoginViewController: UITextFieldDelegate {
         let formater = DateFormatter()
         formater.dateStyle = .long
         formater.timeStyle = .none
+        formater.locale = Locale(identifier: "ru_RU")
+        formater.setLocalizedDateFormatFromTemplate("MMMM d y")
         
         birthdayTF.text = formater.string(from: datePicker.date)
         view.endEditing(true)
+    }
+    
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
     
 }
