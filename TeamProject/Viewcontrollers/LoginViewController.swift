@@ -15,13 +15,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var birthdayTF: UITextField!
     
     let datePicker = UIDatePicker()
-    let person = Person(name: "viewly", lastName: "Oransky", dayOfBirth: "10/05")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         okButton.layer.cornerRadius = okButton.frame.height/2
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "dataSegue" else { return }
+        guard let destination = segue.destination as? ModelViewController else { return }
+        let sendPerson = Person(name: nameTF.text!, lastName: surnameTF.text!, dayOfBirth: birthdayTF.text!, dateOfBirth: datePicker.date)
+        destination.person = sendPerson
+       // destination.testText = birthdayTF.text!
+    }
+    
+    @IBAction func okAction(_ sender: Any) {
+        //performSegue(withIdentifier: "dataSegue", sender: nil)
+    }
+    
     
 }
 
@@ -100,6 +112,9 @@ extension LoginViewController: UITextFieldDelegate {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+    
+    
     
 }
 

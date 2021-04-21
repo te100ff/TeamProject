@@ -11,9 +11,11 @@ struct Person {
     let name: String
     let lastName: String
     let dayOfBirth: String
+    let dateOfBirth: Date
     
     var zodiac: ZodiacSign {
-        ZodiacSign(rawValue: getZodiakFromString(dayOfBirth: dayOfBirth))!
+       // ZodiacSign(rawValue: getZodiakFromString(dayOfBirth: dayOfBirth))!
+        ZodiacSign(rawValue: getZodiak(dayOfBirth: dateOfBirth))!
     }
     
     var zodiacDiscription: String {
@@ -87,6 +89,43 @@ struct Person {
             return "Рыбы олицетворяют чувствительность, страстность, мягкосердечие, а также замкнутость, ранимость, нетерпимость к критике."
         }
     } // Вернет описание знака Зодиака как строку
+    
+    
+    
+    
+    
+    private func getZodiak(dayOfBirth: Date) -> String {
+    
+            let zodiakDic = ["Овен": ["03/21", "04/20"], "Телец": ["04/21", "05/21"],
+                             "Близнецы": ["05/22", "06/21"], "Рак": ["06/22", "07/22"],
+                             "Лев": ["07/23", "08/21"], "Дева": ["08/22", "09/23"],
+                             "Весы": ["09/24", "10/23"], "Скорпион": ["10/24", "11/22"],
+                             "Стрелец": ["11/23", "12/22"],
+                             "Водолей": ["01/21", "02/19"], "Рыбы": ["02/20", "03/20"]]
+    
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM/dd"
+    
+            let calendar = Calendar.current
+            let dateComponents = Calendar.current.dateComponents([.month, .day], from: dayOfBirth)
+            let shortDate = calendar.date(from: dateComponents)
+    
+            for zodiak in zodiakDic {
+    
+                let dateMin = formatter.date(from: zodiak.value.first!)
+                let minDateCompontnts = Calendar.current.dateComponents([.month, .day], from: dateMin!)
+                let realMindate = calendar.date(from: minDateCompontnts)
+                let dateMax = formatter.date(from: zodiak.value.last!)
+                let maxDateCompontnts = Calendar.current.dateComponents([.month, .day], from: dateMax!)
+                let realMaxdate = calendar.date(from: maxDateCompontnts)
+    
+                if (realMindate!...realMaxdate!).contains(shortDate!) {
+                    return zodiak.key
+                }
+            }
+            return "Козерог"
+        }
+    
 }
 
 enum ZodiacSign: String {
