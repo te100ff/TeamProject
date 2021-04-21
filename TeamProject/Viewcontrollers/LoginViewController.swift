@@ -20,8 +20,29 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         okButton.layer.cornerRadius = okButton.frame.height/2
-        
+        okButton.alpha = 0.3
     }
+    //подготовка сегвея
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let greetingVC = segue.destination as! UITabBarController
+        
+        guard let viewControlers = greetingVC.viewControllers else { return }
+        
+        for viewController in viewControlers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                //
+            } else if let aboutVC = viewController as? AboutViewController {
+                //
+            } else if let zodiacVC = viewController as? ZodiacViewController {
+                //
+            }  else if let navigationVC = viewController as? UINavigationController {
+                let friendsVC = navigationVC.topViewController as! BioViewController
+                //
+            }
+        }
+    }
+    */
     
     @IBAction func okButtonPressed() {
         okPressed(textFields: nameTF, surnameTF, birthdayTF)
@@ -43,6 +64,7 @@ extension LoginViewController: UITextFieldDelegate  {
     }
     
     func textFieldDidBeginEditing (_ textField: UITextField) {
+        textFieldSetup(textField: textField)
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -75,8 +97,11 @@ extension LoginViewController: UITextFieldDelegate  {
         toolBar.items = [space, doneButton]
         
         textField.inputAccessoryView = toolBar
-        
-        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.shadowOpacity = 0
+        okButtonChange(textFields: nameTF, surnameTF, birthdayTF)
     }
 
     
@@ -91,6 +116,13 @@ extension LoginViewController: UITextFieldDelegate  {
         view.endEditing(true)
     }
     
+    private func textFieldSetup(textField: UITextField) {
+        textField.layer.shadowOpacity = 1
+        textField.layer.shadowOffset = .zero
+       textField.layer.shadowRadius = 10
+        textField.layer.shadowColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+    }
+    
     private func okPressed(textFields: UITextField... ) {
         textFields.forEach { textField in
             guard let text = textField.text, !text.isEmpty else {
@@ -101,7 +133,17 @@ extension LoginViewController: UITextFieldDelegate  {
         }
     }
     
-    
+    private func okButtonChange(textFields: UITextField... ) {
+        for textField in textFields {
+            guard let text = textField.text, !text.isEmpty else { return }
+            continue
+        }
+            okButton.layer.shadowOpacity = 1
+            okButton.layer.shadowOffset = .zero
+            okButton.layer.shadowRadius = 10
+            okButton.layer.shadowColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            okButton.alpha = 1
+    }
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
