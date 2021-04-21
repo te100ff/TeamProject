@@ -78,6 +78,10 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="okButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYj-Z6-mBu"/>
+                                    <segue destination="fmY-wY-P0j" kind="presentation" modalPresentationStyle="fullScreen" id="qLd-81-Gu5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,7 +99,6 @@
                         <outlet property="nameTF" destination="lgk-xO-HJd" id="GjP-o7-SGg"/>
                         <outlet property="okButton" destination="gHy-lt-Sbr" id="xqW-a8-qhQ"/>
                         <outlet property="surnameTF" destination="BVJ-OS-e1g" id="52M-iN-qVl"/>
-                        <segue destination="fmY-wY-P0j" kind="presentation" id="YQs-Pc-6HU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,7 +110,7 @@
             <objects>
                 <viewController id="Fb1-g0-iKZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zVq-Oi-s95">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="XC5-GS-wO8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -123,7 +126,7 @@
             <objects>
                 <viewController id="5n2-si-b30" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0c-H9-z72">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="imF-61-jix"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -139,7 +142,7 @@
             <objects>
                 <tableViewController id="tRl-7K-mbc" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GfC-xl-k1v">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -171,7 +174,7 @@
             <objects>
                 <viewController id="klU-lc-ND0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dkj-EU-Cxm">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="74r-mI-Anf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -188,7 +191,7 @@
                 <navigationController id="z29-BX-kx0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="huH-QV-GkI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YA9-08-VA1">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -204,7 +207,7 @@
             <objects>
                 <viewController id="bRQ-Lh-B0R" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ecG-oK-uLd">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="9T2-4o-dfZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

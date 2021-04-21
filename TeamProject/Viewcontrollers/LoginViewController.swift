@@ -23,9 +23,15 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func okButtonPressed() {
+        okPressed(textFields: nameTF, surnameTF, birthdayTF)
+    }
+    
+    
+    
 }
 
-extension LoginViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate  {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -62,7 +68,7 @@ extension LoginViewController: UITextFieldDelegate {
                 title: "Done",
                 style: .done,
                 target: nil,
-                action: #selector(doneDatePressed(_:))
+                action: #selector(doneDatePressed)
             )
         }
         
@@ -81,7 +87,7 @@ extension LoginViewController: UITextFieldDelegate {
     
     
     
-    @objc func doneDatePressed(_ sender: UIBarButtonItem) {
+    @objc func doneDatePressed() {
         let formater = DateFormatter()
         formater.dateStyle = .long
         formater.timeStyle = .none
@@ -91,6 +97,30 @@ extension LoginViewController: UITextFieldDelegate {
         birthdayTF.text = formater.string(from: datePicker.date)
         view.endEditing(true)
     }
+    
+    func okPressed(textFields: UITextField... ) {
+        textFields.forEach { textField in
+            switch textField {
+            case nameTF:
+                guard let text = textField.text, !text.isEmpty else {
+                    showAlert(title: "Внимание", message: "Введите имя", textField: textField)
+                    return
+                }
+               
+            case surnameTF:
+                guard let text = textField.text, !text.isEmpty else {
+                    showAlert(title: "Внимание", message: "Введите фамилию", textField: textField)
+                    return
+                }
+            default:
+                guard let text = textField.text, !text.isEmpty else {
+                    showAlert(title: "Внимание", message: "Введите lfne hj;ltybz", textField: textField)
+                    return
+            }
+        }
+        }
+    }
+    
     
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
