@@ -13,15 +13,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var surnameTF: UITextField!
     @IBOutlet weak var birthdayTF: UITextField!
-    @IBOutlet weak var zodiacView: UIImageView!
     
     let datePicker = UIDatePicker()
+    let person = Person(name: "viewly", lastName: "Oransky", dayOfBirth: "10/05")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         okButton.layer.cornerRadius = okButton.frame.height/2
-        
     }
     
 }
