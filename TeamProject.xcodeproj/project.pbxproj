@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14AF218D26300E9200399495 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF218C26300E9200399495 /* Person.swift */; };
 		14AF219426301FEB00399495 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF219326301FEB00399495 /* ModelViewController.swift */; };
+		14AF21992630D87000399495 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF21982630D87000399495 /* Manager.swift */; };
 		18F4112B26299B3A00DC15A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4112A26299B3A00DC15A3 /* AppDelegate.swift */; };
 		18F4112D26299B3A00DC15A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4112C26299B3A00DC15A3 /* SceneDelegate.swift */; };
 		18F4112F26299B3A00DC15A3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4112E26299B3A00DC15A3 /* LoginViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		14AF218C26300E9200399495 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = SOURCE_ROOT; };
 		14AF219326301FEB00399495 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		14AF21982630D87000399495 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		18F4112726299B3A00DC15A3 /* TeamProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F4112A26299B3A00DC15A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F4112C26299B3A00DC15A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		18F4114626299BB300DC15A3 /* Data Managers */ = {
 			isa = PBXGroup;
 			children = (
+				14AF21982630D87000399495 /* Manager.swift */,
 			);
 			path = "Data Managers";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F4112F26299B3A00DC15A3 /* LoginViewController.swift in Sources */,
+				14AF21992630D87000399495 /* Manager.swift in Sources */,
 				18F4112B26299B3A00DC15A3 /* AppDelegate.swift in Sources */,
 				14AF218D26300E9200399495 /* Person.swift in Sources */,
 				14AF219426301FEB00399495 /* ModelViewController.swift in Sources */,

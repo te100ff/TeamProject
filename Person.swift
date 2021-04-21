@@ -20,8 +20,9 @@ struct Person {
     var zodiacDiscription: String {
         getZodiacDiscription(zodiac: zodiac)
     }
-    static func getFriends() {
-        
+    
+    var zodiacEmoji: Character {
+        getZodiacEmoji(zodiac: zodiac)
     }
     
     private func getZodiacDiscription(zodiac: ZodiacSign) -> String {
@@ -87,6 +88,69 @@ struct Person {
             }
             return "Козерог"
         } // Вернет знак Зодиака как строку из Date
+    
+    private func getZodiacEmoji(zodiac: ZodiacSign) -> Character {
+        
+        switch zodiac {
+        
+        case .aries:
+            return "♈️"
+        case .taurus:
+            return "♉️"
+        case .gemini:
+            return "♊️"
+        case .cancer:
+            return "♋️"
+        case .leo:
+            return "♌️"
+        case .virgo:
+            return "♍️"
+        case .libra:
+            return "♎️"
+        case .scorpio:
+            return "♏️"
+        case .sagittarius:
+            return "♐️"
+        case .capricorn:
+            return "♑️"
+        case .aquarius:
+            return "♒️"
+        case .pisces:
+            return "♓️"
+        }
+    } // Вернет Emoji знака Зодиака как Character
+    
+    
+    
+    
+    
+    
+    
+    static func getFriends() -> [Person]{
+        var persons = [Person]()
+        
+        var randomInt = 0.0
+        var date = Date(timeIntervalSince1970: randomInt)
+        let dataNames = DataManager().names.shuffled()
+        let dataSurnames = DataManager().surnames.shuffled()
+        
+        
+        for index in 0..<min(dataNames.count, dataSurnames.count) {
+            randomInt = Double.random(in: 1...1600000000)
+            date = Date(timeIntervalSince1970: randomInt)
+            persons.append(Person(name: dataNames[index],
+                                  lastName: dataSurnames[index],
+                                  dayOfBirth: "xz",
+                                  dateOfBirth: date))
+            
+        }
+        
+        
+        
+        return persons
+    }
+    
+    
     
 }
 
