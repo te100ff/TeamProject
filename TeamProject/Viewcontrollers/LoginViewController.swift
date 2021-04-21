@@ -14,6 +14,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var surnameTF: UITextField!
     @IBOutlet weak var birthdayTF: UITextField!
     
+    @IBOutlet var labels: [UILabel]!
+    
+    
     let datePicker = UIDatePicker()
     
     
@@ -21,6 +24,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         okButton.layer.cornerRadius = okButton.frame.height/2
         okButton.alpha = 0.3
+        //view.backgroundColor = UIColor(patternImage: UIImage(named: "stars")!)
+        assignbackground()
+        labelsSetup()
     }
     //подготовка сегвея
     /*
@@ -48,7 +54,28 @@ class LoginViewController: UIViewController {
         okPressed(textFields: nameTF, surnameTF, birthdayTF)
     }
     
+    func assignbackground(){
+            let background = UIImage(named: "stars")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
+        }
     
+    
+    func labelsSetup() {
+        for label in labels {
+            label.layer.shadowColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            label.layer.shadowOpacity = 1
+            label.layer.shadowRadius = 15
+            label.layer.shadowOffset = .zero
+        }
+    }
     
 }
 
@@ -140,8 +167,8 @@ extension LoginViewController: UITextFieldDelegate  {
         }
             okButton.layer.shadowOpacity = 1
             okButton.layer.shadowOffset = .zero
-            okButton.layer.shadowRadius = 10
-            okButton.layer.shadowColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            okButton.layer.shadowRadius = 20
+            okButton.layer.shadowColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
             okButton.alpha = 1
     }
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
