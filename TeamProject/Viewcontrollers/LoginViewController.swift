@@ -78,14 +78,7 @@ extension LoginViewController: UITextFieldDelegate  {
         
         
     }
-    
-    
-    //    @objc func clearPressed() {
-    //        nameTF.text = ""
-    //        view.endEditing(true)
-    //    }
-    
-    
+
     
     @objc func doneDatePressed() {
         let formater = DateFormatter()
@@ -98,26 +91,13 @@ extension LoginViewController: UITextFieldDelegate  {
         view.endEditing(true)
     }
     
-    func okPressed(textFields: UITextField... ) {
+    private func okPressed(textFields: UITextField... ) {
         textFields.forEach { textField in
-            switch textField {
-            case nameTF:
-                guard let text = textField.text, !text.isEmpty else {
-                    showAlert(title: "Внимание", message: "Введите имя", textField: textField)
-                    return
-                }
-               
-            case surnameTF:
-                guard let text = textField.text, !text.isEmpty else {
-                    showAlert(title: "Внимание", message: "Введите фамилию", textField: textField)
-                    return
-                }
-            default:
-                guard let text = textField.text, !text.isEmpty else {
-                    showAlert(title: "Внимание", message: "Введите lfne hj;ltybz", textField: textField)
-                    return
+            guard let text = textField.text, !text.isEmpty else {
+                showAlert(title: "Внимание", message: "Заполните все поля", textField: textField)
+                return
             }
-        }
+            
         }
     }
     
