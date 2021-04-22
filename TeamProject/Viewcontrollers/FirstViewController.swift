@@ -29,27 +29,25 @@ class FirstViewController: UIViewController {
         labelsSetup()
     }
     
-    //подготовка сегвея
-    /*
+    // MARK: - Navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      let greetingVC = segue.destination as! UITabBarController
      
      guard let viewControlers = greetingVC.viewControllers else { return }
      
      for viewController in viewControlers {
-     if let welcomeVC = viewController as? WelcomeViewController {
+     if let welcomeVC = viewController as? UIViewController {
      //
-     } else if let aboutVC = viewController as? AboutViewController {
+     } else if let aboutVC = viewController as? UIViewController {
      //
-     } else if let zodiacVC = viewController as? ZodiacViewController {
+     } else if let zodiacVC = viewController as? UIViewController {
      //
      }  else if let navigationVC = viewController as? UINavigationController {
-     let friendsVC = navigationVC.topViewController as! BioViewController
+     let friendsVC = navigationVC.topViewController as! UITableViewController
      //
      }
      }
      }
-     */
     
     // MARK: - IB Actions
     @IBAction func okButtonPressed() {
