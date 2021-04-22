@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		069D05D52631AB6B004C8624 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D05D42631AB6B004C8624 /* MyProfileViewController.swift */; };
-		069D05D82631AB80004C8624 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D05D72631AB80004C8624 /* AboutMeViewController.swift */; };
+		069D05D82631AB80004C8624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D05D72631AB80004C8624 /* ViewController.swift */; };
 		069D05DB2631ABD1004C8624 /* MyHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D05DA2631ABD1004C8624 /* MyHoroscopeViewController.swift */; };
 		069D05DE2631AC09004C8624 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D05DD2631AC09004C8624 /* TabBarViewController.swift */; };
 		069D05E12631AC95004C8624 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D05E02631AC95004C8624 /* MyFriendsViewController.swift */; };
 		069D05E42631ACD2004C8624 /* MyFriendsHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D05E32631ACD2004C8624 /* MyFriendsHoroscopeViewController.swift */; };
+		06EB054C26321866001F79B9 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EB054B26321866001F79B9 /* AboutMeViewController.swift */; };
 		18F4112B26299B3A00DC15A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4112A26299B3A00DC15A3 /* AppDelegate.swift */; };
 		18F4112D26299B3A00DC15A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4112C26299B3A00DC15A3 /* SceneDelegate.swift */; };
 		18F4113226299B3A00DC15A3 /* PhilipMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F4113026299B3A00DC15A3 /* PhilipMain.storyboard */; };
@@ -22,11 +23,12 @@
 
 /* Begin PBXFileReference section */
 		069D05D42631AB6B004C8624 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
-		069D05D72631AB80004C8624 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		069D05D72631AB80004C8624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		069D05DA2631ABD1004C8624 /* MyHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHoroscopeViewController.swift; sourceTree = "<group>"; };
 		069D05DD2631AC09004C8624 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		069D05E02631AC95004C8624 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
 		069D05E32631ACD2004C8624 /* MyFriendsHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsHoroscopeViewController.swift; sourceTree = "<group>"; };
+		06EB054B26321866001F79B9 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		18F4112726299B3A00DC15A3 /* TeamProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F4112A26299B3A00DC15A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F4112C26299B3A00DC15A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				069D05D42631AB6B004C8624 /* MyProfileViewController.swift */,
-				069D05D72631AB80004C8624 /* AboutMeViewController.swift */,
+				069D05D72631AB80004C8624 /* ViewController.swift */,
+				06EB054B26321866001F79B9 /* AboutMeViewController.swift */,
 				069D05DA2631ABD1004C8624 /* MyHoroscopeViewController.swift */,
 				069D05DD2631AC09004C8624 /* TabBarViewController.swift */,
 				069D05E02631AC95004C8624 /* MyFriendsViewController.swift */,
@@ -202,11 +205,12 @@
 			files = (
 				069D05E12631AC95004C8624 /* MyFriendsViewController.swift in Sources */,
 				069D05DB2631ABD1004C8624 /* MyHoroscopeViewController.swift in Sources */,
-				069D05D82631AB80004C8624 /* AboutMeViewController.swift in Sources */,
+				069D05D82631AB80004C8624 /* ViewController.swift in Sources */,
 				18F4112B26299B3A00DC15A3 /* AppDelegate.swift in Sources */,
 				069D05DE2631AC09004C8624 /* TabBarViewController.swift in Sources */,
 				069D05D52631AB6B004C8624 /* MyProfileViewController.swift in Sources */,
 				18F4112D26299B3A00DC15A3 /* SceneDelegate.swift in Sources */,
+				06EB054C26321866001F79B9 /* AboutMeViewController.swift in Sources */,
 				069D05E42631ACD2004C8624 /* MyFriendsHoroscopeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
