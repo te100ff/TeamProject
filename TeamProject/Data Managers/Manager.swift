@@ -13,6 +13,4 @@ class DataManager {
                  "Marcia", "Felicia", "Andrea", "Gladys", "Julie"]
     let surnames = ["Franklin", "Washington", "Thomas", "Austin", "Shelton",
                    "Owen", "Kelley", "Stanley", "Fields", "Hunter"]
-
-    
 }

@@ -134,21 +134,27 @@ struct Person {
         let dataNames = DataManager().names.shuffled()
         let dataSurnames = DataManager().surnames.shuffled()
         
-        
         for index in 0..<min(dataNames.count, dataSurnames.count) {
             randomInt = Double.random(in: 1...1600000000)
             date = Date(timeIntervalSince1970: randomInt)
+            
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            formatter.timeStyle = .none
+            formatter.locale = Locale(identifier: "ru_RU")
+            formatter.dateFormat = "MMMM d y"
+            
+            let beautifulDate = formatter.string(from: date)
+            
+            
             persons.append(Person(name: dataNames[index],
                                   lastName: dataSurnames[index],
-                                  dayOfBirth: "xz",
+                                  dayOfBirth: beautifulDate,
                                   dateOfBirth: date))
-            
         }
         
-        
-        
         return persons
-    }
+    } // Вернет 10 друзей с рандомными датами
     
     
     
