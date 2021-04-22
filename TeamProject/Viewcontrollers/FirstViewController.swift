@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class FirstViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet weak var okButton: UIButton!
     
@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
 }
 
 // MARK: - Textfields and keyboards setup
-extension LoginViewController: UITextFieldDelegate  {
+extension FirstViewController: UITextFieldDelegate  {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -137,7 +137,7 @@ extension LoginViewController: UITextFieldDelegate  {
 }
 
 // MARK: - Graphics and effects setup
-extension LoginViewController {
+extension FirstViewController {
     private func okButtonChange(textFields: UITextField... ) {
         for textField in textFields {
             guard let text = textField.text, !text.isEmpty else { return }
